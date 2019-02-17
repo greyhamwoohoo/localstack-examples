@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: GreyhamWooHoo Template showing a DynamoDB Stream Configuration
+Resources:
+  MyMinimalisticDynamoDbTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+       TableName: greyhamwoohoo-dbstream-1
+       AttributeDefinitions:
+        - AttributeName: "Name"
+          AttributeType: "S"       
+       KeySchema: 
+        - AttributeName: "Name"
+          KeyType: "HASH"
+       StreamSpecification: 
+         StreamEnabled: True
+         StreamViewType: "NEW_AND_OLD_IMAGES"
