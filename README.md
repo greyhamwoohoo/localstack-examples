@@ -7,6 +7,7 @@ Examples and snippets for using localstack:
 | cloudformation-dynamodb | Cloudformation snippets for DynamoDB Tables |
 | cloudformation-dynamodbstreams | Cloudformation snippets for DynamoDB and DynamoDBStreams |
 
+
 ## To convert from YAML to JSON
 All of the Cloudformation files here are in Yaml. 
 
@@ -29,3 +30,9 @@ From Shell:
 ```
 docker run -it --rm -v .:/workdir joshdvir/aws-cfn-template-flip -j /workdir/cloudformation.yaml > cloudformation.json
 ```
+
+
+## References
+| Description | Link |
+| ----------- | ------ |
+| Dockerized aws-cfn-template-flip | https://hub.docker.com/r/joshdvir/aws-cfn-template-flip |
