@@ -45,6 +45,6 @@ aws --endpoint-url http://localhost:4570 dynamodbstreams get-records --shard-ite
 ## References
 | Description | Link|
 | ----------- | ------ |
-| The different stream types. | https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_StreamSpecification.html <br/><br/>My .yaml uses 'NEW_AND_OLD_IMAGES'; regardless of the value I used, get-records always returns a StreamViewType of 'NEW_AND_OLD_IMAGES' on localstack |
+| The different stream types. | https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_StreamSpecification.html <br/><br/>My .yaml uses 'NEW_AND_OLD_IMAGES'; regardless of the value I used, get-records always returns a StreamViewType of 'NEW_AND_OLD_IMAGES' on localstack. Is this a bug? |
 
 
