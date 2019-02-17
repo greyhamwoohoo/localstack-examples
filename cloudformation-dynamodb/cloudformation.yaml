@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: GreyhamWooHoo Simple Cloudformation Template that works with Localstack
+Resources:
+  MyMinimalisticDynamoDbTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+       TableName: greyhamwoohoo-dynamodb-1
+       AttributeDefinitions:
+        - AttributeName: "Name"
+          AttributeType: "S"       
+       KeySchema: 
+        - AttributeName: "Name"
+          KeyType: "HASH"
+  # See here for a fuller example: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html
+  MyFullDynamoDbTable:
+     Type: AWS::DynamoDB::Table
+     Properties:
+      TableName: greyhamwoohoo-full-dynamodb-1
+      AttributeDefinitions:
+        - AttributeName: "Name"
+          AttributeType: "S"       
+        - AttributeName: "City"
+          AttributeType: "S"                 
+      KeySchema: 
+        - AttributeName: "Name"
+          KeyType: "HASH"
+        - AttributeName: "City"
+          KeyType: "RANGE"          
+      ProvisionedThroughput: 
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      GlobalSecondaryIndexes: 
+        - IndexName: "gsiName"
+          KeySchema: 
+            - AttributeName: "Name"
+              KeyType: "HASH"          
+          Projection: 
+            NonKeyAttributes: 
+              - "City"
+            ProjectionType: "INCLUDE"       
+          ProvisionedThroughput: 
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      

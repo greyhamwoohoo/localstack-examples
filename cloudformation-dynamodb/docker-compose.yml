@@ -1,0 +1,18 @@
+version: '3.0'
+
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4569:4569"
+      - "4570:4570"
+      - "4581:4581"
+      - "8080:8080"
+    environment:
+      - DEBUG=1
+      - SERVICES=dynamodb:4569,dynamodbstreams:4570,cloudformation:4581
+      - DEFAULT_REGION=us-east-1
+      - AWS_SECRET_ACCESS_KEY=Woo
+      - AWS_ACCESS_KEY_ID=Hoo
+      - AWS_DEFAULT_OUTPUT=json
+      - AWS_DEFAULT_REGION=us-east-1

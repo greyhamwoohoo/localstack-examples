@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: GreyhamWooHoo Simple Cloudformation Template that works with Localstack
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: greyhamwoohoo-bucket-1
+      AccessControl: PublicRead
+  MySqsQueue:
+     Type: AWS::SQS::Queue
+     Properties:
+       QueueName: greyhamwoohoo-sqs-queue-1
+  MySnsQueue:
+     Type: AWS::SNS::Topic
+     Properties: 
+       TopicName: greyhamwoohoo-topicname-1
+  MyKinesisStream: 
+     Type: AWS::Kinesis::Stream
+     Properties:
+        Name: greyhamwoohoo-stream-1
+        ShardCount: 1
