@@ -17,5 +17,3 @@ Resources:
       Role: ThisIsNotImportant
       Runtime: nodejs6.10
       Timeout: 60
-# TODO: https://apimeister.com/2018/01/10/implementing-dynamodb-triggers-streams-using-cloudformation.html
-# Thats the reference that bootstrapped most of this triggering / lambda stuff

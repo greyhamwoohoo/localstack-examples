@@ -38,3 +38,4 @@ docker run -it --rm -v .:/workdir joshdvir/aws-cfn-template-flip -j /workdir/clo
 | Description | Link |
 | ----------- | ------ |
 | Dockerized aws-cfn-template-flip | https://hub.docker.com/r/joshdvir/aws-cfn-template-flip |
+| DynamoDB Lambda Triggering | https://apimeister.com/2018/01/10/implementing-dynamodb-triggers-streams-using-cloudformation.html |
