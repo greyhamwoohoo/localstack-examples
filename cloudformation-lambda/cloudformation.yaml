@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: GreyhamWooHoo Simple Cloudformation Template that works with Localstack
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: greyhamwoohoo-bucket-1
+      AccessControl: PublicRead
+  MyLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: MyLambda
+      Code: 
+        S3Bucket: greyhamwoohoo-bucket-1
+        S3Key: index.zip
+      Handler: index.handler
+      Role: ThisIsNotImportant
+      Runtime: nodejs6.10
+      Timeout: 60
+# TODO: https://apimeister.com/2018/01/10/implementing-dynamodb-triggers-streams-using-cloudformation.html
+# Thats the reference that bootstrapped most of this triggering / lambda stuff
