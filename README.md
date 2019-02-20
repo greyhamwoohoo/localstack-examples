@@ -6,6 +6,7 @@ Examples and snippets for using localstack:
 | cloudformation-basic | Cloudformation snippets for S3, Kinesis, Sns and Sqs |
 | cloudformation-dynamodb | Cloudformation snippets for DynamoDB Tables |
 | cloudformation-dynamodbstreams | Cloudformation snippets for DynamoDB and DynamoDBStreams |
+| lambda | Simple Lambda created and invoked from the command line |
 
 
 ## To convert from YAML to JSON
